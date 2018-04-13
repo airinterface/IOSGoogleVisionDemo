@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA04DC952058545D0075DCF8 /* FaceWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA04DC8B2058545D0075DCF8 /* FaceWrapper.framework */; };
+		DA04DC9A2058545D0075DCF8 /* FaceWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA04DC992058545D0075DCF8 /* FaceWrapperTests.m */; };
+		DA04DCAB205854AE0075DCF8 /* FaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA04DCAA205854AE0075DCF8 /* FaceView.xib */; };
+		DA04DCB1205854B70075DCF8 /* DrawingUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = DA04DCAD205854B70075DCF8 /* DrawingUtility.h */; };
+		DA04DCB2205854B70075DCF8 /* DrawingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DA04DCAE205854B70075DCF8 /* DrawingUtility.m */; };
+		DA04DCB3205854B70075DCF8 /* FaceViewWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DA04DCAF205854B70075DCF8 /* FaceViewWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA04DCB4205854B70075DCF8 /* FaceViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DA04DCB0205854B70075DCF8 /* FaceViewWrapper.m */; };
+		DA08DC1F207B11DC005387B0 /* FaceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DA04DC8E2058545D0075DCF8 /* FaceWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA29883E2066174C002A0C8F /* LMprec_600.emd in Resources */ = {isa = PBXBuildFile; fileRef = DA29883820661749002A0C8F /* LMprec_600.emd */; };
+		DA29883F2066174C002A0C8F /* BCLrighteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = DA2988392066174A002A0C8F /* BCLrighteyeclosed_200.emd */; };
+		DA2988402066174C002A0C8F /* PFFprec_702.emd in Resources */ = {isa = PBXBuildFile; fileRef = DA29883A2066174A002A0C8F /* PFFprec_702.emd */; };
+		DA2988412066174C002A0C8F /* MFTprec_202.emd in Resources */ = {isa = PBXBuildFile; fileRef = DA29883B2066174B002A0C8F /* MFTprec_202.emd */; };
+		DA2988422066174C002A0C8F /* BCLjoy_100.emd in Resources */ = {isa = PBXBuildFile; fileRef = DA29883C2066174B002A0C8F /* BCLjoy_100.emd */; };
+		DA2988432066174C002A0C8F /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = DA29883D2066174B002A0C8F /* BCLlefteyeclosed_200.emd */; };
+		DA3094A4207BDC730046D2E4 /* FaceObj.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9BA7142072B6EE00170ECA /* FaceObj.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA3094A5207BDC7C0046D2E4 /* FaceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAD7274020602538004D4A5F /* FaceViewController.h */; };
+		DA9BA7172072B6EE00170ECA /* FaceObj.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA7152072B6EE00170ECA /* FaceObj.m */; };
+		DA9BA71C2072BED200170ECA /* FaceDetectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9BA71A2072BED200170ECA /* FaceDetectRequest.h */; };
+		DA9BA7202072CAD200170ECA /* DebugOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9BA71E2072CAD200170ECA /* DebugOverlay.h */; };
+		DA9BA7212072CAD200170ECA /* DebugOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA71F2072CAD200170ECA /* DebugOverlay.m */; };
+		DAD727412060253A004D4A5F /* FaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD7273F20602535004D4A5F /* FaceViewController.m */; };
+		DAE443C42058D0E100DD971F /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE443BE2058D0E000DD971F /* GoogleSymbolUtilities.framework */; };
+		DAE443C52058D0E100DD971F /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE443BF2058D0E000DD971F /* GoogleInterchangeUtilities.framework */; };
+		DAE443C62058D0E100DD971F /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE443C02058D0E100DD971F /* GoogleNetworkingUtilities.framework */; };
+		DAE443C72058D0E100DD971F /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE443C12058D0E100DD971F /* FaceDetector.framework */; };
+		DAE443C82058D0E100DD971F /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE443C22058D0E100DD971F /* GoogleMobileVision.framework */; };
+		DAE443C92058D0E100DD971F /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE443C32058D0E100DD971F /* GoogleUtilities.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA04DC962058545D0075DCF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA04DC822058545D0075DCF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA04DC8A2058545D0075DCF8;
+			remoteInfo = FaceWrapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA04DC8B2058545D0075DCF8 /* FaceWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FaceWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA04DC8E2058545D0075DCF8 /* FaceWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceWrapper.h; sourceTree = "<group>"; };
+		DA04DC8F2058545D0075DCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA04DC942058545D0075DCF8 /* FaceWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA04DC992058545D0075DCF8 /* FaceWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceWrapperTests.m; sourceTree = "<group>"; };
+		DA04DC9B2058545D0075DCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA04DCAA205854AE0075DCF8 /* FaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceView.xib; sourceTree = "<group>"; };
+		DA04DCAD205854B70075DCF8 /* DrawingUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingUtility.h; sourceTree = "<group>"; };
+		DA04DCAE205854B70075DCF8 /* DrawingUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingUtility.m; sourceTree = "<group>"; };
+		DA04DCAF205854B70075DCF8 /* FaceViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceViewWrapper.h; sourceTree = "<group>"; };
+		DA04DCB0205854B70075DCF8 /* FaceViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceViewWrapper.m; sourceTree = "<group>"; };
+		DA04DCB5205855370075DCF8 /* FaceWrapperConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FaceWrapperConfig.xcconfig; sourceTree = "<group>"; };
+		DA29883820661749002A0C8F /* LMprec_600.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = LMprec_600.emd; sourceTree = "<group>"; };
+		DA2988392066174A002A0C8F /* BCLrighteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLrighteyeclosed_200.emd; sourceTree = "<group>"; };
+		DA29883A2066174A002A0C8F /* PFFprec_702.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = PFFprec_702.emd; sourceTree = "<group>"; };
+		DA29883B2066174B002A0C8F /* MFTprec_202.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MFTprec_202.emd; sourceTree = "<group>"; };
+		DA29883C2066174B002A0C8F /* BCLjoy_100.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLjoy_100.emd; sourceTree = "<group>"; };
+		DA29883D2066174B002A0C8F /* BCLlefteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLlefteyeclosed_200.emd; sourceTree = "<group>"; };
+		DA9BA7142072B6EE00170ECA /* FaceObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceObj.h; sourceTree = "<group>"; };
+		DA9BA7152072B6EE00170ECA /* FaceObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceObj.m; sourceTree = "<group>"; };
+		DA9BA71A2072BED200170ECA /* FaceDetectRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetectRequest.h; sourceTree = "<group>"; };
+		DA9BA71E2072CAD200170ECA /* DebugOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugOverlay.h; sourceTree = "<group>"; };
+		DA9BA71F2072CAD200170ECA /* DebugOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugOverlay.m; sourceTree = "<group>"; };
+		DAD7273F20602535004D4A5F /* FaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceViewController.m; sourceTree = "<group>"; };
+		DAD7274020602538004D4A5F /* FaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceViewController.h; sourceTree = "<group>"; };
+		DAE443BE2058D0E000DD971F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		DAE443BF2058D0E000DD971F /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		DAE443C02058D0E100DD971F /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		DAE443C12058D0E100DD971F /* FaceDetector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceDetector.framework; sourceTree = "<group>"; };
+		DAE443C22058D0E100DD971F /* GoogleMobileVision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileVision.framework; sourceTree = "<group>"; };
+		DAE443C32058D0E100DD971F /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA04DC872058545D0075DCF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE443C92058D0E100DD971F /* GoogleUtilities.framework in Frameworks */,
+				DAE443C42058D0E100DD971F /* GoogleSymbolUtilities.framework in Frameworks */,
+				DAE443C62058D0E100DD971F /* GoogleNetworkingUtilities.framework in Frameworks */,
+				DAE443C82058D0E100DD971F /* GoogleMobileVision.framework in Frameworks */,
+				DAE443C52058D0E100DD971F /* GoogleInterchangeUtilities.framework in Frameworks */,
+				DAE443C72058D0E100DD971F /* FaceDetector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA04DC912058545D0075DCF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA04DC952058545D0075DCF8 /* FaceWrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA04DC812058545D0075DCF8 = {
+			isa = PBXGroup;
+			children = (
+				DAE443B82058CC5300DD971F /* Frameworks */,
+				DA04DCB5205855370075DCF8 /* FaceWrapperConfig.xcconfig */,
+				DA04DC8D2058545D0075DCF8 /* FaceWrapper */,
+				DA04DC982058545D0075DCF8 /* FaceWrapperTests */,
+				DA04DC8C2058545D0075DCF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA04DC8C2058545D0075DCF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA04DC8B2058545D0075DCF8 /* FaceWrapper.framework */,
+				DA04DC942058545D0075DCF8 /* FaceWrapperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA04DC8D2058545D0075DCF8 /* FaceWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DA04DCAC205854B70075DCF8 /* Sources */,
+				DA04DCA9205854AE0075DCF8 /* Resources */,
+				DA04DC8E2058545D0075DCF8 /* FaceWrapper.h */,
+				DA04DC8F2058545D0075DCF8 /* Info.plist */,
+			);
+			path = FaceWrapper;
+			sourceTree = "<group>";
+		};
+		DA04DC982058545D0075DCF8 /* FaceWrapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA04DC992058545D0075DCF8 /* FaceWrapperTests.m */,
+				DA04DC9B2058545D0075DCF8 /* Info.plist */,
+			);
+			path = FaceWrapperTests;
+			sourceTree = "<group>";
+		};
+		DA04DCA9205854AE0075DCF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA29883C2066174B002A0C8F /* BCLjoy_100.emd */,
+				DA29883D2066174B002A0C8F /* BCLlefteyeclosed_200.emd */,
+				DA2988392066174A002A0C8F /* BCLrighteyeclosed_200.emd */,
+				DA29883820661749002A0C8F /* LMprec_600.emd */,
+				DA29883B2066174B002A0C8F /* MFTprec_202.emd */,
+				DA29883A2066174A002A0C8F /* PFFprec_702.emd */,
+				DA04DCAA205854AE0075DCF8 /* FaceView.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA04DCAC205854B70075DCF8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DAD7274020602538004D4A5F /* FaceViewController.h */,
+				DAD7273F20602535004D4A5F /* FaceViewController.m */,
+				DA04DCAD205854B70075DCF8 /* DrawingUtility.h */,
+				DA04DCAE205854B70075DCF8 /* DrawingUtility.m */,
+				DA04DCAF205854B70075DCF8 /* FaceViewWrapper.h */,
+				DA04DCB0205854B70075DCF8 /* FaceViewWrapper.m */,
+				DA9BA7142072B6EE00170ECA /* FaceObj.h */,
+				DA9BA7152072B6EE00170ECA /* FaceObj.m */,
+				DA9BA71A2072BED200170ECA /* FaceDetectRequest.h */,
+				DA9BA71E2072CAD200170ECA /* DebugOverlay.h */,
+				DA9BA71F2072CAD200170ECA /* DebugOverlay.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DAE443B82058CC5300DD971F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAE443C12058D0E100DD971F /* FaceDetector.framework */,
+				DAE443BF2058D0E000DD971F /* GoogleInterchangeUtilities.framework */,
+				DAE443C22058D0E100DD971F /* GoogleMobileVision.framework */,
+				DAE443C02058D0E100DD971F /* GoogleNetworkingUtilities.framework */,
+				DAE443BE2058D0E000DD971F /* GoogleSymbolUtilities.framework */,
+				DAE443C32058D0E100DD971F /* GoogleUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DA04DC882058545D0075DCF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA08DC1F207B11DC005387B0 /* FaceWrapper.h in Headers */,
+				DA04DCB3205854B70075DCF8 /* FaceViewWrapper.h in Headers */,
+				DA3094A4207BDC730046D2E4 /* FaceObj.h in Headers */,
+				DA9BA71C2072BED200170ECA /* FaceDetectRequest.h in Headers */,
+				DA3094A5207BDC7C0046D2E4 /* FaceViewController.h in Headers */,
+				DA9BA7202072CAD200170ECA /* DebugOverlay.h in Headers */,
+				DA04DCB1205854B70075DCF8 /* DrawingUtility.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DA04DC8A2058545D0075DCF8 /* FaceWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA04DC9F2058545D0075DCF8 /* Build configuration list for PBXNativeTarget "FaceWrapper" */;
+			buildPhases = (
+				DA04DC862058545D0075DCF8 /* Sources */,
+				DA04DC872058545D0075DCF8 /* Frameworks */,
+				DA04DC882058545D0075DCF8 /* Headers */,
+				DA04DC892058545D0075DCF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceWrapper;
+			productName = FaceWrapper;
+			productReference = DA04DC8B2058545D0075DCF8 /* FaceWrapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA04DC932058545D0075DCF8 /* FaceWrapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA04DCA22058545D0075DCF8 /* Build configuration list for PBXNativeTarget "FaceWrapperTests" */;
+			buildPhases = (
+				DA04DC902058545D0075DCF8 /* Sources */,
+				DA04DC912058545D0075DCF8 /* Frameworks */,
+				DA04DC922058545D0075DCF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA04DC972058545D0075DCF8 /* PBXTargetDependency */,
+			);
+			name = FaceWrapperTests;
+			productName = FaceWrapperTests;
+			productReference = DA04DC942058545D0075DCF8 /* FaceWrapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA04DC822058545D0075DCF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Yuri Fukuda";
+				TargetAttributes = {
+					DA04DC8A2058545D0075DCF8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					DA04DC932058545D0075DCF8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DA04DC852058545D0075DCF8 /* Build configuration list for PBXProject "FaceWrapper" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA04DC812058545D0075DCF8;
+			productRefGroup = DA04DC8C2058545D0075DCF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA04DC8A2058545D0075DCF8 /* FaceWrapper */,
+				DA04DC932058545D0075DCF8 /* FaceWrapperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA04DC892058545D0075DCF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA04DCAB205854AE0075DCF8 /* FaceView.xib in Resources */,
+				DA29883E2066174C002A0C8F /* LMprec_600.emd in Resources */,
+				DA29883F2066174C002A0C8F /* BCLrighteyeclosed_200.emd in Resources */,
+				DA2988402066174C002A0C8F /* PFFprec_702.emd in Resources */,
+				DA2988412066174C002A0C8F /* MFTprec_202.emd in Resources */,
+				DA2988422066174C002A0C8F /* BCLjoy_100.emd in Resources */,
+				DA2988432066174C002A0C8F /* BCLlefteyeclosed_200.emd in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA04DC922058545D0075DCF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA04DC862058545D0075DCF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9BA7172072B6EE00170ECA /* FaceObj.m in Sources */,
+				DAD727412060253A004D4A5F /* FaceViewController.m in Sources */,
+				DA9BA7212072CAD200170ECA /* DebugOverlay.m in Sources */,
+				DA04DCB2205854B70075DCF8 /* DrawingUtility.m in Sources */,
+				DA04DCB4205854B70075DCF8 /* FaceViewWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA04DC902058545D0075DCF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA04DC9A2058545D0075DCF8 /* FaceWrapperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA04DC972058545D0075DCF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA04DC8A2058545D0075DCF8 /* FaceWrapper */;
+			targetProxy = DA04DC962058545D0075DCF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DA04DC9D2058545D0075DCF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA04DCB5205855370075DCF8 /* FaceWrapperConfig.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA04DC9E2058545D0075DCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA04DCB5205855370075DCF8 /* FaceWrapperConfig.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA04DCA02058545D0075DCF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRC_ROOT)/Sources\"",
+				);
+				INFOPLIST_FILE = FaceWrapper/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.airinterface.FaceWrapper;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA04DCA12058545D0075DCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRC_ROOT)/Sources\"",
+				);
+				INFOPLIST_FILE = FaceWrapper/Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.airinterface.FaceWrapper;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA04DCA32058545D0075DCF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaceWrapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eachscape.FaceWrapperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA04DCA42058545D0075DCF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FaceWrapperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eachscape.FaceWrapperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA04DC852058545D0075DCF8 /* Build configuration list for PBXProject "FaceWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA04DC9D2058545D0075DCF8 /* Debug */,
+				DA04DC9E2058545D0075DCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA04DC9F2058545D0075DCF8 /* Build configuration list for PBXNativeTarget "FaceWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA04DCA02058545D0075DCF8 /* Debug */,
+				DA04DCA12058545D0075DCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA04DCA22058545D0075DCF8 /* Build configuration list for PBXNativeTarget "FaceWrapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA04DCA32058545D0075DCF8 /* Debug */,
+				DA04DCA42058545D0075DCF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA04DC822058545D0075DCF8 /* Project object */;
+}
