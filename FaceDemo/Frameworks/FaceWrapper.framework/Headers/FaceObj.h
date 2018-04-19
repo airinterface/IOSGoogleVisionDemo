@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Quartzcore/Quartzcore.h>
+typedef NSUInteger PaymentMethodType;
 
 @interface FaceObj : NSObject
 
 @property( nonatomic, readwrite ) NSMutableDictionary* faceData;
-@property( nonatomic, readwrite ) NSUInteger id;
-
-- ( NSDictionary* ) getData;
-
+  @property( nonatomic, readwrite ) NSUInteger uid;
+  - ( NSDictionary* ) getData;
+  - ( NSDictionary* ) getStrData;
+  - ( NSUInteger ) getUID;
 
 @end

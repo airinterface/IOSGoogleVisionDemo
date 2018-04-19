@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA39EBF92080901A000C3FE3 /* FaceWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39EBF620808FFA000C3FE3 /* FaceWrapper.framework */; };
-		DA39EBFA2080902C000C3FE3 /* FaceWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA39EBF620808FFA000C3FE3 /* FaceWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA2DE45B2088CED200DF9B67 /* FaceWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA2DE4592088CECC00DF9B67 /* FaceWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA9BA5ED206EF6BB00170ECA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA5EC206EF6BB00170ECA /* AppDelegate.m */; };
 		DA9BA5F0206EF6BB00170ECA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA5EF206EF6BB00170ECA /* ViewController.m */; };
 		DA9BA5F3206EF6BB00170ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9BA5F1206EF6BB00170ECA /* Main.storyboard */; };
@@ -37,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DA4F9A77207BE66500383246 /* Embed Frameworks */ = {
+		DA39EC1C20810A5D000C3FE3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA39EBFA2080902C000C3FE3 /* FaceWrapper.framework in Embed Frameworks */,
+				DA2DE45B2088CED200DF9B67 /* FaceWrapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA39EBF620808FFA000C3FE3 /* FaceWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceWrapper.framework; path = Frameworks/FaceWrapper.framework; sourceTree = "<group>"; };
+		DA2DE4592088CECC00DF9B67 /* FaceWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceWrapper.framework; path = Frameworks/FaceWrapper.framework; sourceTree = "<group>"; };
 		DA9BA5E8206EF6BB00170ECA /* FaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9BA5EB206EF6BB00170ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA9BA5EC206EF6BB00170ECA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA39EBF92080901A000C3FE3 /* FaceWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +152,7 @@
 		DA9BA70520727E1A00170ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA39EBF620808FFA000C3FE3 /* FaceWrapper.framework */,
+				DA2DE4592088CECC00DF9B67 /* FaceWrapper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,10 +164,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA9BA614206EF6BB00170ECA /* Build configuration list for PBXNativeTarget "FaceDemo" */;
 			buildPhases = (
-				DA4F9A77207BE66500383246 /* Embed Frameworks */,
 				DA4F9A75207BE66500383246 /* Frameworks */,
 				DA9BA5E4206EF6BB00170ECA /* Sources */,
 				DA9BA5E6206EF6BB00170ECA /* Resources */,
+				DA39EC1C20810A5D000C3FE3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,7 +225,7 @@
 				TargetAttributes = {
 					DA9BA5E7206EF6BB00170ECA = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					DA9BA5FF206EF6BB00170ECA = {
 						CreatedOnToolsVersion = 9.2;
@@ -458,7 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.airinterface.vision-ios.FaceDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				THIRD_PARTY_FRAMEWORK_PATH = "${SRCROOT}/Frameworks\n";
@@ -481,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,6 +493,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.airinterface.vision-ios.FaceDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				THIRD_PARTY_FRAMEWORK_PATH = "${SRCROOT}/Frameworks\n";

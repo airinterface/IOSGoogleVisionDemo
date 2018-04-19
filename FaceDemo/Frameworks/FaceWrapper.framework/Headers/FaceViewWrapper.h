@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @interface FaceViewWrapper : UIView
-- (UIView* ) createFaceView :(NSDictionary *)options;
+- ( UIView* ) createFaceView :(NSDictionary *) options;
 - ( void ) destroy;
+- ( void ) captureImage: (void (^)( UIImage* )) callback
+          errorCallback: (void (^)(NSString* errorMessage)) errorCallback;
 @end
 
