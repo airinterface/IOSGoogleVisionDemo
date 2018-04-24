@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA2DE45B2088CED200DF9B67 /* FaceWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA2DE4592088CECC00DF9B67 /* FaceWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA9BA5ED206EF6BB00170ECA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA5EC206EF6BB00170ECA /* AppDelegate.m */; };
 		DA9BA5F0206EF6BB00170ECA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA5EF206EF6BB00170ECA /* ViewController.m */; };
 		DA9BA5F3206EF6BB00170ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9BA5F1206EF6BB00170ECA /* Main.storyboard */; };
@@ -16,6 +15,8 @@
 		DA9BA5FB206EF6BB00170ECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA5FA206EF6BB00170ECA /* main.m */; };
 		DA9BA605206EF6BB00170ECA /* FaceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA604206EF6BB00170ECA /* FaceDemoTests.m */; };
 		DA9BA610206EF6BB00170ECA /* FaceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9BA60F206EF6BB00170ECA /* FaceDemoUITests.m */; };
+		DAB4AB04208A3D19002FDD65 /* FaceWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB4AB02208A3D0F002FDD65 /* FaceWrapper.framework */; };
+		DAB4AB05208A3D5C002FDD65 /* FaceWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAB4AB02208A3D0F002FDD65 /* FaceWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DA2DE45B2088CED200DF9B67 /* FaceWrapper.framework in Embed Frameworks */,
+				DAB4AB05208A3D5C002FDD65 /* FaceWrapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +51,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA2DE4592088CECC00DF9B67 /* FaceWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceWrapper.framework; path = Frameworks/FaceWrapper.framework; sourceTree = "<group>"; };
 		DA9BA5E8206EF6BB00170ECA /* FaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9BA5EB206EF6BB00170ECA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA9BA5EC206EF6BB00170ECA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		DA9BA60B206EF6BB00170ECA /* FaceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9BA60F206EF6BB00170ECA /* FaceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceDemoUITests.m; sourceTree = "<group>"; };
 		DA9BA611206EF6BB00170ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB4AB02208A3D0F002FDD65 /* FaceWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaceWrapper.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FaceWrapper-amloxxydfilzhogzqvzxccmitsuo/Build/Products/Debug-iphoneos/FaceWrapper.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB4AB04208A3D19002FDD65 /* FaceWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +154,7 @@
 		DA9BA70520727E1A00170ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA2DE4592088CECC00DF9B67 /* FaceWrapper.framework */,
+				DAB4AB02208A3D0F002FDD65 /* FaceWrapper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,7 +227,7 @@
 				TargetAttributes = {
 					DA9BA5E7206EF6BB00170ECA = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					DA9BA5FF206EF6BB00170ECA = {
 						CreatedOnToolsVersion = 9.2;
@@ -456,8 +458,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JR2L8W49H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
@@ -480,8 +483,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JR2L8W49H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",

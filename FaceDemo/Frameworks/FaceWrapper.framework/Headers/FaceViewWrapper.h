@@ -11,7 +11,6 @@
 @interface FaceViewWrapper : UIView
 - ( UIView* ) createFaceView :(NSDictionary *) options;
 - ( void ) destroy;
-- ( void ) captureImage: (void (^)( UIImage* )) callback
-          errorCallback: (void (^)(NSString* errorMessage)) errorCallback;
+- ( UIImage* ) captureImage;
 @end
 

@@ -11,8 +11,8 @@
 
 @interface ViewController ()
 @property (retain, readwrite, nonatomic) FaceViewWrapper *faceWrapper;
-@property (weak, nonatomic) IBOutlet UIView *mainView;
-@property (weak, nonatomic) IBOutlet UIView *capturedView;
+@property (weak, nonatomic) IBOutlet UIView      *mainView;
+@property (weak, nonatomic) IBOutlet UIImageView *capturedView;
 @end
 
 @implementation ViewController
@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   NSDictionary* option = @{
-                          @"cameraType"    : @"front",
+                          @"cameraType"    : @"back",
                           @"debugEnabled"  : @YES,
                           @"singleFace"    : @NO,
                           @"onUpdate"      : ^( FaceObj* faceObj ) {
@@ -63,21 +63,14 @@
   
   UIWindow * mainWindow = [UIApplication sharedApplication].windows.firstObject;
   //UIImage * res = [self captureImageFromUIView:mainWindow];
-  [self.faceWrapper captureImage: ^(UIImage* myImage) {
-    //self.capturedView.backgroundColor = [UIColor colorWithPatternImage: myImage];
-    dispatch_async(dispatch_get_main_queue(), ^{
-          CALayer* caputuredLayer = self.capturedView.layer;
-          caputuredLayer.contentsGravity = kCAGravityResizeAspect;
-          caputuredLayer.contents = ( __bridge id )[ myImage CGImage ];
-          [ caputuredLayer setNeedsDisplay ];
-          //[ caputuredLayer displayIfNeeded];
-    });
+  UIImage* res = [self.faceWrapper captureImage];
+  //self.capturedView.backgroundColor = [UIColor colorWithPatternImage: myImage];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    self.capturedView.image = res;
+    [self.capturedView setNeedsDisplay ];
+  });
 
 
-  } errorCallback: ^(NSString* message){
-    NSLog(message);
-  }];
-  
 }
 
 
@@ -143,13 +136,6 @@
 - ( UIImage * ) captureImageFromUIView:(UIView *) view {
   return [self newCGImageFromLayer:view.layer
                              frame:view.frame];
-  /*CALayer *rootLayer = [self.placeHolder layer];
-   UIGraphicsBeginImageContextWithOptions(self.placeHolder.bounds.size, NO, 0.0);
-   CGContextRef ctx = UIGraphicsGetCurrentContext();
-   [rootLayer renderInContext:ctx];
-   UIImage *res = UIGraphicsGetImageFromCurrentImageContext();
-   UIGraphicsEndImageContext();
-   return res;*/
 }
 
 @end
