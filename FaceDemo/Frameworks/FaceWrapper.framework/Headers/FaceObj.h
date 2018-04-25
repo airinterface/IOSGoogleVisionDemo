@@ -16,6 +16,6 @@ typedef NSUInteger PaymentMethodType;
   @property( nonatomic, readwrite ) NSUInteger uid;
   - ( NSDictionary* ) getData;
   - ( NSDictionary* ) getStrData;
-  - ( NSUInteger ) getUID;
+  - ( NSUInteger ) getID;
 
 @end

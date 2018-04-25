@@ -31,7 +31,7 @@
                           @"onNew"      : ^( FaceObj* faceObj ) {
                             [self onFaceDetectorNew:faceObj ];
                           },
-                          @"onMissing"      :^( NSInteger id, NSArray<FaceObj*>* faceObjList ) {
+                          @"onMissing"      :^( NSUInteger id, NSArray<FaceObj*>* faceObjList ) {
                             [self onFaceDetectorMissing: id faces:faceObjList ];
                           },
                           @"onDone"         :^() {
@@ -95,7 +95,7 @@
   }
 }
 
-- (void) onFaceDetectorMissing: ( NSInteger ) id
+- (void) onFaceDetectorMissing: ( NSUInteger ) id
           faces: ( NSArray<FaceObj*>* ) faceObjList {
   if( faceObjList != NULL ) {
     NSLog(@"[face]Missing!!!!! %1d, %lu", id, (unsigned long) [ faceObjList count] );
