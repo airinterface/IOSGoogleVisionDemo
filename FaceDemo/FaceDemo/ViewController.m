@@ -22,9 +22,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   NSDictionary* option = @{
-                          @"cameraType"    : @"back",
+                          @"cameraType"    : @"front",
                           @"debugEnabled"  : @YES,
-                          @"singleFace"    : @NO,
+                          @"singleFace"    : @YES,
                           @"onUpdate"      : ^( FaceObj* faceObj ) {
                             [self onFaceDetectorUpdate:faceObj ];
                             },
@@ -34,8 +34,8 @@
                           @"onMissing"      :^( NSUInteger id, NSArray<FaceObj*>* faceObjList ) {
                             [self onFaceDetectorMissing: id faces:faceObjList ];
                           },
-                          @"onDone"         :^() {
-                            [self onFaceDetectorDone ];
+                          @"onDone"         :^( NSUInteger id, NSArray<FaceObj*>* faceObjList ) {
+                            [self onFaceDetectorDone: id faces:faceObjList  ];
                           }
 
                           };
@@ -102,7 +102,8 @@
   }
 }
 
-- (void) onFaceDetectorDone{
+- (void) onFaceDetectorDone:( NSUInteger ) id
+faces: ( NSArray<FaceObj*>* ) faceObjList {
   NSLog(@"[face]Done!!!!!");
 }
 

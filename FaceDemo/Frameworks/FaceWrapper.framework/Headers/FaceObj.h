@@ -13,7 +13,7 @@ typedef NSUInteger PaymentMethodType;
 @interface FaceObj : NSObject
 
 @property( nonatomic, readwrite ) NSMutableDictionary* faceData;
-  @property( nonatomic, readwrite ) NSUInteger uid;
+@property( nonatomic, readwrite ) NSUInteger uid;
   - ( NSDictionary* ) getData;
   - ( NSDictionary* ) getStrData;
   - ( NSUInteger ) getID;
